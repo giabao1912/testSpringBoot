@@ -1,10 +1,7 @@
 package vn.unigap.api.controller;
 
 import jakarta.ws.rs.PathParam;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import vn.unigap.api.entity.Employe;
 
 
@@ -19,7 +16,7 @@ public class EmployeController {
         return employe;
     }
     @PostMapping("/employe")
-    public Employe createEmploye(Employe employe) {
+    public Employe createEmploye(@RequestBody Employe employe) {
         return employe;
     }
 }
